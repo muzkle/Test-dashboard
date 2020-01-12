@@ -29,7 +29,7 @@ export class AuthenticationService {
   login(context: LoginContext): Observable<any> {
     // Replace by proper authentication call
 
-    return this.http.post('http://localhost:3334/api/users/login', context).pipe(
+    return this.http.post('https://technical-test-talent.herokuapp.com//api/users/login', context).pipe(
       map((res: any) => {
         if (!res.error) {
           this.credentialsService.setCredentials(res, context.remember);
@@ -44,7 +44,7 @@ export class AuthenticationService {
   register(context: any): Observable<any> {
     // Replace by proper authentication call
 
-    return this.http.post('http://localhost:3334/api/users', context).pipe(
+    return this.http.post('https://technical-test-talent.herokuapp.com//api/users', context).pipe(
       map((res: any) => {
         if (!res.error) {
           console.log(res);
