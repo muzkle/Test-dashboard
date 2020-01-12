@@ -35,7 +35,7 @@ export class UsersService {
 
   getUsers(context: any): Observable<any> {
     return this.http
-      .get('https://technical-test-talent.herokuapp.com//api/users', {
+      .get('https://technical-test-talent.herokuapp.com/api/users', {
         headers: { Authorization: `Bearer ${this.creadentialsService.credentials.token}` }
       })
       .pipe(
@@ -51,7 +51,7 @@ export class UsersService {
 
   editUser(user: any): Observable<any> {
     return this.http
-      .put(`https://technical-test-talent.herokuapp.com//api/users`, user, {
+      .put(`https://technical-test-talent.herokuapp.com/api/users`, user, {
         headers: { Authorization: `Bearer ${this.creadentialsService.credentials.token}` }
       })
       .pipe(
@@ -67,7 +67,7 @@ export class UsersService {
 
   deleteUser(context: any): Observable<any> {
     return this.http
-      .delete(`https://technical-test-talent.herokuapp.com//api/users/${context}`, {
+      .delete(`https://technical-test-talent.herokuapp.com/api/users/${context}`, {
         headers: { Authorization: `Bearer ${this.creadentialsService.credentials.token}` }
       })
       .pipe(
